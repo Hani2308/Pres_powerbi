@@ -17,15 +17,15 @@ Sources des libellés : `sources.md`. Ce document fixe le contenu ; la forme est
 
 | Feuille | Contenu | Défauts plantés |
 |---|---|---|
-| `Export_Ventes` | ~5 000 lignes de tickets : Date, N° ticket, Code magasin, Réf produit, Quantité, Prix unitaire (MAD) | Date en texte JJ/MM/AAAA ; ligne « TOTAL GÉNÉRAL » collée en bas ; ~40 lignes en double (export relancé sur une plage qui chevauche) ; « MAG-07 » avec espace final sur une partie des lignes ; ventes de « MAG-13 », un magasin ouvert en mars 2026 et absent du référentiel |
-| `Magasins` | 12 lignes (13 avec le doublon) : Code, Nom, « Ville - Région », Surface m², Date d'ouverture | Colonne fusionnée « Ville - Région » ; « Casablanca » / « casa » / « CASABLANCA » ; espaces en fin de ville ; MAG-05 en double (ancienne adresse + nouvelle après déménagement) |
+| `Export_Ventes` | ~5 000 lignes de tickets : Date, N° ticket, Code magasin, Réf produit, Quantité, Prix unitaire (MAD) | Deux lignes de titre au-dessus des en-têtes ; Date en texte JJ/MM/AAAA ; une ligne vide puis une ligne « TOTAL GÉNÉRAL » collées en bas ; ~40 lignes en double (une semaine réexportée et collée à la fin, avec un espace après chaque code magasin) ; ventes de « MAG-13 », un magasin ouvert en mars 2026 et absent du référentiel |
+| `Magasins` | 12 lignes (13 avec le doublon) : Code, Nom, « Ville - Région », Surface m², Date d'ouverture | Colonne fusionnée « Ville - Région » ; « Casablanca » / « casa » / « CASABLANCA » ; espaces en fin de ville ; MAG-05 saisi deux fois, la seconde avec « Salé » suivi d'un espace |
 | `Produits` | ~60 références : Réf, Désignation, Catégorie, Prix catalogue | Propre, volontairement : on ne nettoie pas tout. |
 | `Calendrier` | Une ligne par jour : Date, Année, N° mois, Mois (« janvier »…), Trimestre | Propre, fournie. Le piège arrive tout seul : le mois en texte se trie par ordre alphabétique. |
 | `Corrigé formateur` | Chaque défaut, sa localisation exacte (feuille, cellules, nombre de lignes), la correction attendue, et les totaux de contrôle avant/après | |
 
 Saisonnalité modélisée : Ramadan (1er au 30 mars 2025, 18 février au 19 mars 2026, hausse épicerie et boissons, baisse textile en journée), Aïd al-Fitr (hausse textile la semaine avant), Aïd al-Adha (6 juin 2025, 27 mai 2026, hausse maison), rentrée (fin août à mi-septembre, fournitures scolaires), soldes d'été (juillet-août) et d'hiver (janvier) sur le textile. Les dates de fêtes religieuses sont des estimations astronomiques : elles seront marquées comme telles dans le corrigé.
 
-Le décalage du Ramadan d'une année sur l'autre donne le meilleur moment du module DAX : la comparaison N-1 de mars 2026 sort en forte baisse alors que le commerce va bien. On s'en sert pour montrer ce que `SAMEPERIODLASTYEAR` compare réellement.
+Le décalage du Ramadan d'une année sur l'autre donne le meilleur moment du module DAX : sur le dataset final, février 2026 fait +31 % et mars 2026 -26 % par rapport à l'année précédente, alors que le commerce va bien. On s'en sert pour montrer ce que `SAMEPERIODLASTYEAR` compare réellement.
 
 ## Les 7 formules DAX (et rien de plus)
 
@@ -54,14 +54,14 @@ M = manipulation par les participants. E = exposé ou démo du formateur. Q = é
 | **Module 1** | | **Prise en main et import** | | | |
 | 9h40 | 7 | Tour de l'écran | E | 8 | Les trois vues, le ruban, les volets. |
 | 9h47 | 5 | Obtenir les données | E | 9 | Démo du Navigateur. |
-| 9h52 | 3 | L'erreur du bouton Charger | E | 10 | CA à 2x la réalité à cause de la ligne TOTAL. |
+| 9h52 | 3 | L'erreur du bouton Charger | E | 10 | Quantités à 2x la réalité à cause de la ligne TOTAL. |
 | 9h55 | 15 | TP 1 | M | 11 | Importer les 4 feuilles via « Transformer les données ». Rattrapage R1. |
 | 10h10 | | *fin module 1* | | | |
 | **Module 2** | | **Power Query** | | | |
 | 10h10 | 5 | Le principe | E | 12 | Les étapes sont une recette rejouée à chaque actualisation. |
 | 10h15 | 5 | L'éditeur | E | 13 | Étapes appliquées, aperçu, barre de formule. |
 | 10h20 | 7 | Les dates | E | 14-15 | La date lue à l'américaine, puis la correction par les paramètres régionaux. |
-| 10h27 | 23 | TP 2a | M | 16 | En-têtes, types, dates, suppression de la ligne TOTAL. |
+| 10h27 | 23 | TP 2a | M | 16 | Lignes de titre, en-têtes, ligne TOTAL (filtre sur N° ticket), dates. |
 | 10h50 | 10 | Mise en commun | Q | 16 | Chacun annonce son nombre de lignes ; on traite les écarts. |
 | 11h00 | 15 | *Pause* | | | |
 | 11h15 | 5 | Retour de pause | Q | 17 | « Combien de villes voyez-vous dans la colonne Ville ? » |
@@ -78,7 +78,7 @@ M = manipulation par les participants. E = exposé ou démo du formateur. Q = é
 | 13h40 | 7 | Le schéma en étoile | E | 25 | |
 | 13h47 | 5 | Relier dans la vue Modèle | E | 26 | Glisser-déposer, boîte de dialogue, cardinalité, direction. |
 | 13h52 | 4 | Erreur : plusieurs-à-plusieurs | E | 27 | Doublon MAG-05 oublié, retour dans Power Query. |
-| 13h56 | 4 | Erreur : la ligne (Vide) | E | 28 | MAG-13 absent du référentiel, « MAG-07 » avec espace. |
+| 13h56 | 4 | Erreur : la ligne (Vide) | E | 28 | MAG-13 absent du référentiel. |
 | 14h00 | 5 | Le sens du filtre | E | 29 | Nb de magasins par catégorie : 12 partout. |
 | 14h05 | 20 | TP 3 | M | 30 | Relations, table de dates, désactivation de date/heure automatique. Rattrapage R3. |
 | 14h25 | | *fin module 3* | | | |
@@ -130,18 +130,18 @@ Les numéros d'étape sur PAS et TP sont de vraies étapes de manipulation, pas 
 | 7 | Cet export contient au moins sept pièges, et vous en avez trouvé combien ? | CAP | Capture Excel de l'export, annotée de 7 repères (date texte, TOTAL, espace, casa…). Révélation après l'échange. |
 | 8 | Power BI Desktop s'organise en trois vues, et on passe la matinée dans aucune des trois | CAP | Tour de l'écran : vues Rapport / Table / Modèle, ruban, volets Visualisations, Données, Filtres. La blague : la matinée se passe dans Power Query. |
 | 9 | Le Navigateur vous montre les feuilles avant de rien charger | PAS | Accueil > Obtenir les données > Classeur Excel > cocher les 4 feuilles. |
-| 10 | Le bouton Charger envoie la ligne TOTAL dans vos calculs et double le CA | AVA | Avant : carte CA à ~2x la réalité. Après : « Transformer les données », la ligne TOTAL visible et supprimable. Erreur réelle n°1. |
+| 10 | Le bouton Charger envoie la ligne TOTAL dans vos calculs et double les quantités vendues | AVA | Avant : carte « Somme de Quantité » à 2x la réalité, et le message d'erreurs de chargement. Après : « Transformer les données », la ligne TOTAL visible et supprimable. Erreur réelle n°1. |
 | 11 | Importez les quatre feuilles et arrêtez-vous dans Power Query | TP | 15 min. Résultat attendu : 4 requêtes dans le volet de gauche. Rattrapage R1. |
 | 12 | Power Query rejoue vos nettoyages à chaque actualisation | SCH | Mécanisme : fichier source, puis étapes, puis table propre. Le fichier de la semaine suivante passe par les mêmes étapes. La phrase-clé de la journée. |
 | 13 | Chaque clic devient une ligne dans Étapes appliquées, et on peut revenir en arrière | CAP | Éditeur Power Query annoté : ruban, aperçu, Étapes appliquées, barre de formule (Affichage). |
 | 14 | Lue à l'américaine, une date JJ/MM devient « Error » le 13 février et le 4 mars le 3 avril | AVA | Erreur réelle n°2, la plus vicieuse : une partie des dates est fausse sans aucun message. |
 | 15 | Modifier le type avec les paramètres régionaux règle le problème sur n'importe quel PC | PAS | Icône de type > Utilisation des paramètres régionaux > Date > Français (Maroc). |
-| 16 | Remettez l'export d'aplomb : en-têtes, types, dates, ligne TOTAL | TP | 23 min + 10 min de mise en commun. Résultat attendu : nombre de lignes exact, aucune cellule « Error ». |
-| 17 | Combien de villes voyez-vous dans la colonne Ville ? | QST | Retour de pause. Réponse attendue : « 10 », réponse réelle : 14. |
+| 16 | Remettez l'export d'aplomb : lignes de titre, en-têtes, ligne TOTAL, dates | TP | 23 min + 10 min de mise en commun. Résultat attendu : nombre de lignes exact, aucune cellule « Error ». |
+| 17 | Combien de villes voyez-vous dans la colonne Ville ? | QST | Retour de pause. Réponse attendue : « 10 », réponse réelle : 13 (dont deux « Salé » qui ont l'air identiques). |
 | 18 | Pour Power Query, « casa », « Casablanca » et « CASABLANCA » sont trois villes différentes | AVA | Avant : la liste de filtre avec les variantes. Après : une seule Casablanca. Dessous, en petit, l'enchaînement Supprimer les espaces > Majuscule à chaque mot > Remplacer les valeurs, et le piège « Casablancablanca ». Erreur réelle n°3. |
 | 19 | Fractionner la colonne par délimiteur sépare la ville de sa région | PAS | Boîte de dialogue avec « - » comme délimiteur, et pourquoi on choisit « espace-tiret-espace ». |
-| 20 | Dédoublonnez en dernier, sinon « MAG-07 » et « MAG-07 » avec un espace survivent tous les deux | TXT | Une phrase, un exemple. Erreur réelle n°4. |
-| 21 | Nettoyez Magasins et Ventes jusqu'à retrouver exactement 4 9xx lignes | TP | 35 min. Chiffre exact tiré du corrigé. Bonus profils techniques : lire le code M dans la barre de formule. |
+| 20 | Supprimez les espaces avant de dédoublonner, sinon « MAG-03 » et « MAG-03 » suivi d'un espace survivent tous les deux | TXT | Une phrase, un exemple. Erreur réelle n°4. |
+| 21 | Nettoyez Magasins et Ventes jusqu'à retrouver exactement 5 159 ventes et 12 magasins | TP | 35 min. Chiffres tirés du corrigé. Bonus profils techniques : lire le code M dans la barre de formule. |
 | 22 | Lundi suivant : on remplace le fichier, on clique sur Actualiser, octobre est là | AVA | Avant : rapport arrêté au 30 septembre. Après : première semaine d'octobre ajoutée, rien retouché. Puis Fermer et appliquer. Rattrapage R2. |
 | 23 | Votre premier visuel est faux, et c'est normal | CAP | Capture : CA par ville avec une barre « (Vide) » et des totaux étranges. Lance le module Modèle par un problème. |
 | 24 | Pourquoi ne pas tout mettre dans une seule grande table, comme dans Excel ? | QST | Laisser répondre. On attend « RECHERCHEV ». |
@@ -153,10 +153,10 @@ Les numéros d'étape sur PAS et TP sont de vraies étapes de manipulation, pas 
 | 30 | Reliez les quatre tables et marquez le calendrier comme table de dates | TP | 20 min. Désactiver date/heure automatique. Résultat attendu : 3 relations un-à-plusieurs, aucune barre (Vide) sauf MAG-13. Rattrapage R3. |
 | 31 | Une colonne calcule ligne par ligne, une mesure calcule pour chaque case du visuel | SCH | Le schéma colonne/mesure : à gauche le tableau des lignes avec Montant, à droite une matrice où chaque case est un SUM sous filtre. |
 | 32 | Montant s'écrit une fois dans la table, CA se recalcule à chaque clic | COD | Formules 1 et 2. Note : virgule et pas point-virgule, SUM et pas SOMME. Frappe guidée. |
-| 33 | Écrit en colonne calculée, le CA affiche le même total sur les 4 9xx lignes | AVA | Erreur réelle n°8. Avant : colonne CA = total partout. Après : mesure. |
+| 33 | Écrit en colonne calculée, le CA affiche 392 688 MAD sur chacune des 5 159 lignes | AVA | Erreur réelle n°8. Avant : colonne CA = total partout. Après : mesure. |
 | 34 | DIVIDE calcule le panier moyen sans jamais afficher d'erreur de division | COD | Formules 3 et 4. Frappe guidée. |
 | 35 | CALCULATE remplace le filtre de la ville avant de calculer | COD | Formule 5 + capture de matrice où « CA Casablanca » vaut la même chose sur la ligne Fès. Question à la salle avant l'explication. |
-| 36 | En mars 2026, le CA chute de X % sur un an : le Ramadan a commencé en février | GRA | Graphique calculé sur le dataset : CA et CA N-1 par mois, février-mars mis en évidence. Formules 6 et 7. La valeur X sera calculée. |
+| 36 | Mars 2026 recule de 26 % sur un an alors que février gagne 31 % : le Ramadan a avancé de onze jours | GRA | Graphique calculé sur le dataset : CA et CA N-1 par mois, février-mars mis en évidence. Formules 6 et 7. |
 | 37 | Écrivez les sept formules et comparez vos résultats aux valeurs attendues | TP | 25 min. Tableau des valeurs attendues dans le guide. Rattrapage R4. |
 | 38 | Sans tri explicite, avril passe avant janvier | AVA | Erreur réelle n°9. Avant : axe des mois en ordre alphabétique. Après : Outils de colonne > Trier par colonne > N° mois. |
 | 39 | Une page de rapport se lit de haut en bas : les chiffres clés, l'évolution, le détail | CAP | Le rapport final annoté : cartes, courbe, barres, segments, et où cliquer pour les interactions. |
