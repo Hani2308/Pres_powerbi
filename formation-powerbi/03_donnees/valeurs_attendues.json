@@ -1,0 +1,154 @@
+{
+  "lignes_brutes_export": 5189,
+  "lignes_dupliquees": 30,
+  "lignes_apres_nettoyage": 5159,
+  "ca_total": 392688.0,
+  "ca_doublons_si_oublies": 2001.5,
+  "nb_tickets": 3076,
+  "panier_moyen": 127.66,
+  "ca_casablanca": 119542.65,
+  "ca_mag13_vide": 5099.5,
+  "ca_par_ville": {
+    "Agadir": 29048.0,
+    "Casablanca": 119542.65,
+    "Fès": 32099.2,
+    "Marrakech": 35707.7,
+    "Meknès": 21122.65,
+    "Oujda": 19259.7,
+    "Rabat": 41835.35,
+    "Salé": 31709.75,
+    "Tanger": 34179.7,
+    "Tétouan": 23083.8
+  },
+  "ca_fevrier_2026": 16714.1,
+  "ca_fevrier_2025": 12714.6,
+  "evol_fevrier_2026": 0.3146,
+  "ca_mars_2026": 20832.55,
+  "ca_mars_2025": 28101.05,
+  "evol_mars_2026": -0.2587,
+  "ca_annee_2025": 199614.6,
+  "mensuel": [
+    {
+      "annee": 2024,
+      "mois": 10,
+      "ca": 12212.5
+    },
+    {
+      "annee": 2024,
+      "mois": 11,
+      "ca": 16396.7
+    },
+    {
+      "annee": 2024,
+      "mois": 12,
+      "ca": 13462.8
+    },
+    {
+      "annee": 2025,
+      "mois": 1,
+      "ca": 14916.45
+    },
+    {
+      "annee": 2025,
+      "mois": 2,
+      "ca": 12714.6
+    },
+    {
+      "annee": 2025,
+      "mois": 3,
+      "ca": 28101.05
+    },
+    {
+      "annee": 2025,
+      "mois": 4,
+      "ca": 18228.1
+    },
+    {
+      "annee": 2025,
+      "mois": 5,
+      "ca": 16438.0
+    },
+    {
+      "annee": 2025,
+      "mois": 6,
+      "ca": 13511.7
+    },
+    {
+      "annee": 2025,
+      "mois": 7,
+      "ca": 15973.1
+    },
+    {
+      "annee": 2025,
+      "mois": 8,
+      "ca": 18722.6
+    },
+    {
+      "annee": 2025,
+      "mois": 9,
+      "ca": 18454.0
+    },
+    {
+      "annee": 2025,
+      "mois": 10,
+      "ca": 14751.5
+    },
+    {
+      "annee": 2025,
+      "mois": 11,
+      "ca": 14420.9
+    },
+    {
+      "annee": 2025,
+      "mois": 12,
+      "ca": 13382.6
+    },
+    {
+      "annee": 2026,
+      "mois": 1,
+      "ca": 14892.7
+    },
+    {
+      "annee": 2026,
+      "mois": 2,
+      "ca": 16714.1
+    },
+    {
+      "annee": 2026,
+      "mois": 3,
+      "ca": 20832.55
+    },
+    {
+      "annee": 2026,
+      "mois": 4,
+      "ca": 13509.35
+    },
+    {
+      "annee": 2026,
+      "mois": 5,
+      "ca": 16493.8
+    },
+    {
+      "annee": 2026,
+      "mois": 6,
+      "ca": 14285.2
+    },
+    {
+      "annee": 2026,
+      "mois": 7,
+      "ca": 17295.2
+    },
+    {
+      "annee": 2026,
+      "mois": 8,
+      "ca": 19551.9
+    },
+    {
+      "annee": 2026,
+      "mois": 9,
+      "ca": 17426.6
+    }
+  ],
+  "maj_lignes_apres_nettoyage": 5239,
+  "maj_ca_total": 399416.9
+}
