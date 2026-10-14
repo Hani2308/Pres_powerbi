@@ -18,6 +18,7 @@
 4. Clic droit sur l'image > Mettre en arrière-plan, puis Avancer d'un plan jusqu'à passer devant le rectangle gris : les cadres et flèches rouges restent au-dessus.
 5. Supprimez le rectangle gris et sa légende « Capture Cxx ».
 6. Recalez les cadres rouges de quelques millimètres sur les vrais éléments de l'interface.
+7. Clic droit sur l'image > Afficher le texte de remplacement : collez la ligne « Ce qu'on doit voir » de la capture. Les participants qui suivent le support avec un lecteur d'écran en ont besoin.
 
 ## Séance : Hors de Power BI (5 min)
 

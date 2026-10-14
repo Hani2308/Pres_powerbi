@@ -181,3 +181,50 @@ Ordre de travail, chaque étape vérifiée avant la suivante :
 5. **Guide participant et déroulé formateur** (docx).
 6. **Liste de captures** : `05_captures/liste_captures.md`, numérotée, reliée aux slides, avec les points « contrôle libellé » de `sources.md`.
 7. **Contrôle** : rendu de chaque slide en PNG avec LibreOffice et relecture visuelle ; design-critique ; accessibility-review (contraste AA, taille minimale 20 pt sur les slides) ; recherche automatique des mots et tournures interdits ; verification-before-completion. Commit et push sur `claude/festive-keller-6c9guo`.
+
+## Découpage final, tel que produit
+
+Construit à partir du fichier `01_presentation/Initiation_Power_BI.pptx` après production. Écarts avec le découpage validé : slides 24 et 41-42 fusionnées comme convenu ; slide 10 reformulée (un Charger direct envoie le titre et la ligne TOTAL dans la table, voir sources) ; fractionnement (18) placé avant le nettoyage de la casse (19), puisqu'il faut une colonne Ville pour la nettoyer ; slide 23 centrée sur le visuel sans relation.
+
+| # | Titre | Gabarit (layout) | Captures |
+|---|---|---|---|
+| 1 |  | Couverture |  |
+| 2 |  | Enonce |  |
+| 3 |  | Contenu | C03 |
+| 4 |  | Contenu | C04 |
+| 5 |  | Contenu |  |
+| 6 |  | A vous |  |
+| 7 |  | Contenu | C07a, C07b, C07c |
+| 8 |  | Contenu | C08 |
+| 9 |  | Contenu | C09 |
+| 10 |  | Contenu | C10a, C10b |
+| 11 |  | A vous |  |
+| 12 |  | Contenu |  |
+| 13 |  | Contenu | C13 |
+| 14 |  | Contenu | C14a, C14b |
+| 15 |  | Contenu | C15 |
+| 16 |  | A vous |  |
+| 17 |  | Enonce |  |
+| 18 |  | Contenu | C18 |
+| 19 |  | Contenu | C19a, C19b |
+| 20 |  | Enonce |  |
+| 21 |  | A vous |  |
+| 22 |  | Contenu | C22a, C22b |
+| 23 |  | Contenu | C23 |
+| 24 |  | Contenu |  |
+| 25 |  | Contenu | C25a, C25b |
+| 26 |  | Contenu | C26a, C26b |
+| 27 |  | Contenu | C27 |
+| 28 |  | Contenu |  |
+| 29 |  | A vous |  |
+| 30 |  | Contenu |  |
+| 31 |  | Contenu |  |
+| 32 |  | Contenu | C32a, C32b |
+| 33 |  | Contenu |  |
+| 34 |  | Contenu | C34 |
+| 35 |  | Contenu | graphique |
+| 36 |  | A vous |  |
+| 37 |  | Contenu | C37a, C37b |
+| 38 |  | Contenu | C38 |
+| 39 |  | A vous |  |
+| 40 |  | Enonce |  |

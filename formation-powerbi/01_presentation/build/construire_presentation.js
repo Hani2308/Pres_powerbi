@@ -186,9 +186,9 @@ capture(s, {
   annotations: "Un cadre rouge sur la carte « Dernière vente ».",
 });
 cadre(s, 10.15, 2.05, 2.3, 1.0);
-note(s, fr("Au 30/09 ce matin. Dans dix minutes : au 11/10."), 9.6, 3.15, 2.9, { taille: 16, h: 0.8 });
+note(s, fr("Au 30/09 ce matin. Dans dix minutes : au 11/10."), 9.6, 3.15, 2.9, { taille: 18, h: 0.8 });
 notes(s, `
-Démo de 10 minutes. C'est le moment « wow » de la journée, il faut qu'il soit fluide : répétez-la la veille.
+Démo de 10 minutes. C'est le moment « wow » de la journée, il ne doit pas accrocher : répétez-la la veille.
 
 Je passe sur Power BI (R5_rapport.pbix déjà ouvert). Ce que je montre, dans cet ordre :
 1. Je clique sur Casablanca dans le graphique en barres : toute la page se filtre. « Pas de formule à changer, pas de TCD à refaire. »
@@ -227,7 +227,7 @@ Deux minutes, pas plus. C'est le plan de la journée, mais je le présente comme
 
 « Ce matin, on ne fait QUE les deux premières étapes. Ça paraît beaucoup de temps pour du nettoyage. En vrai, c'est là que se joue 80 % de la qualité de votre rapport. »
 
-Je précise le fonctionnement : je montre, vous faites, et pour chaque TP il y a un fichier de rattrapage. « Si vous décrochez, vous ne restez pas bloqué : vous ouvrez le fichier de rattrapage et vous repartez avec tout le monde. Ce n'est pas un échec, c'est prévu. »
+Je précise le fonctionnement : je montre, vous faites, et pour chaque TP il y a un fichier de rattrapage. « Si vous décrochez, vous ne restez pas bloqué : vous ouvrez le fichier de rattrapage et vous repartez avec tout le monde. C'est prévu pour ça. »
 
 Je ne repasserai pas cette slide. À chaque début de module, je redis juste en une phrase où on en est sur ce trajet.
 `);
@@ -293,7 +293,7 @@ Mise en commun, 3 minutes. Je demande d'abord : « Combien de problèmes avez-vo
 
 Puis je révèle la slide. Les sept pièges sont listés en bas à droite.
 
-Le huitième, je ne le dis pas : c'est le magasin MAG-13, ouvert en mars 2026 à Kénitra, qui vend mais n'existe pas dans la feuille Magasins. On le découvrira en faisant le modèle, cet après-midi. Je garde le suspense, ça marche bien.
+Le huitième, je ne le dis pas : c'est le magasin MAG-13, ouvert en mars 2026 à Kénitra, qui vend mais n'existe pas dans la feuille Magasins. On tombera dessus cet après-midi, en faisant le modèle. Je garde le suspense, ça marche bien.
 
 Le point à faire passer : « Ce fichier n'est pas un fichier pourri que j'ai inventé pour vous embêter. Chacun de ces défauts, je l'ai vu dans de vrais exports. Et dans Excel, vous les corrigez à la main, chaque semaine. Dans Power BI, vous les corrigez une fois. »
 
@@ -312,9 +312,9 @@ capture(s, {
 });
 cadre(s, G.L + 0.05, 2.6, 0.35, 1.5);
 cadre(s, 7.0, 2.6, 2.85, 3.3);
-note(s, fr("Vue Rapport, vue Table, vue Modèle. Les deux icônes du bas (requête DAX, TMDL) ne servent pas aujourd'hui."), G.L + 0.55, 6.2, 9.0, { h: 0.6, taille: 17 });
+note(s, fr("Vue Rapport, vue Table, vue Modèle. Les deux icônes du bas (requête DAX, TMDL) ne servent pas aujourd'hui."), G.L + 0.55, 6.2, 9.0, { h: 0.6, taille: 18 });
 fleche(s, G.L + 0.45, 6.35, G.L + 0.22, 4.15, K.rouge, { epaisseur: 1.75 });
-note(s, fr("Filtres, Visualisations et Données : ce qui sert à construire une page."), 10.2, 3.6, 2.5, { h: 1.4, taille: 17 });
+note(s, fr("Filtres, Visualisations et Données : ce qui sert à construire une page."), 10.2, 3.6, 2.5, { h: 1.4, taille: 18 });
 fleche(s, 10.15, 3.9, 9.9, 3.9);
 notes(s, `
 Je projette Power BI en vrai, en même temps que la slide, et je fais le tour de l'écran en 5 minutes.
@@ -466,8 +466,8 @@ cadre(s, 8.35, 2.55, 1.85, 3.9);
 fleche(s, 10.7, 2.75, 10.25, 2.75);
 note(s, fr("Étapes appliquées : cliquez sur une étape pour revoir la table à ce moment-là."), 10.75, 2.45, 2.0, { h: 2.0 });
 cadre(s, 1.35, 2.35, 6.8, 0.38);
-fleche(s, 7.4, 1.95, 7.0, 2.33);
-note(s, fr("Barre de formule : Affichage > Barre de formule"), 7.5, 1.72, 4.6, { taille: 16, h: 0.35 });
+fleche(s, 6.85, 1.95, 6.5, 2.33);
+note(s, fr("Barre de formule : Affichage > Barre de formule"), 6.95, 1.68, 5.8, { taille: 18, h: 0.4 });
 notes(s, `
 Je montre l'éditeur Power Query en vrai, 5 minutes. Trois zones à connaître :
 - l'aperçu au milieu, qui n'affiche que les premières lignes (important : ce n'est pas tout le fichier) ;
@@ -663,7 +663,7 @@ texte(s, [
   { text: `${nf(V.ca_doublons_si_oublies, 2)} MAD comptés deux fois.`, gras: true },
 ], G.L, 5.2, 10.8, { couleur: K.gris });
 notes(s, `
-Erreur n°4. Une slide sans image, volontairement : c'est une règle d'ordre, il faut qu'elle se lise de loin.
+Erreur n°4. Une slide sans image, volontairement : c'est une question d'ordre des étapes, elle doit se lire de loin.
 
 L'histoire : quelqu'un a recollé dans l'export une semaine de juin déjà présente. Les 30 lignes sont des copies, sauf que le système qui les a sorties ajoute un espace après le code magasin. « MAG-03 » et « MAG-03 espace ».
 
@@ -755,7 +755,7 @@ Je ne fais pas d'introduction. Je demande directement : « Vue Rapport, visuel T
 
 Résultat : chaque ville affiche le même nombre, qui est le total général. Je laisse les gens réagir. Il y a toujours quelqu'un pour dire « c'est cassé ».
 
-« Ce n'est pas cassé, c'est logique. Pour Power BI, la table Magasins et la table Ventes sont deux fichiers qui ne se connaissent pas. Il ne sait pas quelle vente appartient à quel magasin. Dans Excel, vous auriez fait une RECHERCHEV. Ici, on fait une relation, une fois pour toutes. »
+« Rien n'est cassé. Pour Power BI, la table Magasins et la table Ventes sont deux fichiers qui ne se connaissent pas. Il ne sait pas quelle vente appartient à quel magasin. Dans Excel, vous auriez fait une RECHERCHEV. Ici, on fait une relation, une fois pour toutes. »
 
 C'est pour ça qu'on a décoché la détection automatique ce matin : sinon Power BI l'aurait devinée, et vous n'auriez jamais vu ce qui se passe sans elle.
 `);
@@ -895,17 +895,17 @@ tableSch(G.L, 2.3, "Produits", ["Réf produit", "Catégorie"]);
 tableSch(4.4, 2.3, "Ventes", ["Réf produit", "Code magasin", "Quantité"], true);
 tableSch(7.85, 2.3, "Magasins", ["Code magasin", "Ville"]);
 fleche(s, 3.2, 3.15, 4.35, 3.15, K.petrole, { epaisseur: 3 });
-note(s, "1", 3.25, 2.8, 0.3, { couleur: K.gris, taille: 16 });
-note(s, "*", 4.1, 2.8, 0.3, { couleur: K.gris, taille: 16 });
+note(s, "1", 3.25, 2.8, 0.3, { couleur: K.gris, taille: 18 });
+note(s, "*", 4.1, 2.8, 0.3, { couleur: K.gris, taille: 18 });
 note(s, fr("le filtre Catégorie passe"), G.L + 0.4, 4.35, 3.4, { couleur: K.petrole, taille: 18, gras: true });
 fleche(s, 6.95, 3.15, 7.8, 3.15, K.rouge, { epaisseur: 3, tirets: true });
-note(s, "*", 7.0, 2.8, 0.3, { couleur: K.gris, taille: 16 });
-note(s, "1", 7.55, 2.8, 0.3, { couleur: K.gris, taille: 16 });
+note(s, "*", 7.0, 2.8, 0.3, { couleur: K.gris, taille: 18 });
+note(s, "1", 7.55, 2.8, 0.3, { couleur: K.gris, taille: 18 });
 note(s, fr("il ne remonte pas vers Magasins"), 6.3, 4.35, 3.6, { taille: 18, gras: true });
 s.addTable([
-  [{ text: fr("Catégorie"), options: { bold: true } }, { text: "Magasins", options: { bold: true, align: "right" } }],
+  [{ text: fr("Catégorie"), options: { bold: true } }, { text: "Nb", options: { bold: true, align: "right" } }],
   ...["Boissons", "Épicerie", "Maison", "Textile"].map((c) => [fr(c), { text: "12", options: { align: "right", color: K.rouge } }]),
-], { x: 10.48, y: 2.3, w: 2.2, colW: [1.15, 1.05], fontFace: P.texte, fontSize: 16, color: K.encre, border: { type: "solid", pt: 0.75, color: K.filet }, rowH: 0.36, margin: 0.05 });
+], { x: 10.5, y: 2.3, w: 2.2, colW: [1.45, 0.75], fontFace: P.texte, fontSize: 18, color: K.encre, border: { type: "solid", pt: 0.75, color: K.filet }, rowH: 0.4, margin: 0.05 });
 texte(s, [
   { text: "Résultat dans un tableau « Nb magasins par catégorie » : ", gras: true },
   "12 sur chaque ligne, faux. Le compte doit se faire côté Ventes : DISTINCTCOUNT(Ventes[Code magasin]), qu'on écrira tout à l'heure.",
@@ -974,7 +974,7 @@ s.addTable([
 ], { x: 7.45, y: 2.35, w: 3.6, colW: [1.9, 1.7], fontFace: P.texte, fontSize: 18, color: K.encre, border: { type: "solid", pt: 0.75, color: K.filet }, rowH: 0.42, margin: 0.06 });
 cadre(s, 9.35, 2.79, 1.72, 0.46);
 fleche(s, 11.65, 3.02, 11.15, 3.02);
-note(s, fr("La somme des Montant des seules lignes de Casablanca."), 11.25, 3.3, 1.45, { taille: 16, h: 1.6 });
+note(s, fr("La somme des Montant des seules lignes de Casablanca."), 11.25, 3.3, 1.45, { taille: 18, h: 1.6 });
 texte(s, "Recalculée pour chaque case, à chaque clic. Rien n'est stocké.", 7.45, 5.0, 3.6, { taille: 18, couleur: K.gris });
 texte(s, [{ text: "En pratique : ", gras: true }, "une colonne quand la valeur appartient à la ligne (le montant d'une vente), une mesure pour tout ce qui s'agrège (un CA, un nombre, une moyenne)."], G.L, 6.0, 11.6);
 notes(s, `
@@ -1115,14 +1115,14 @@ s.addChart(pres.charts.BAR, [
   { name: "CA 2026", labels: mois, values: D.mensuel_2026.map((x) => Math.round(x)) },
 ], {
   x: G.L, y: 1.85, w: 7.55, h: 4.85, barDir: "col", barGrouping: "clustered", barGapWidthPct: 60, barOverlapPct: -8,
-  chartColors: ["A3A39E", "0B4F4A"], showLegend: true, legendPos: "b", legendFontFace: "+mn-lt", legendFontSize: 16, legendColor: "222222",
+  chartColors: ["8C8C87", "0B4F4A"], showLegend: true, legendPos: "b", legendFontFace: "+mn-lt", legendFontSize: 16, legendColor: "222222",
   catAxisLabelFontFace: "+mn-lt", catAxisLabelFontSize: 16, catAxisLabelColor: "5E5E5E", catAxisLineShow: false,
-  valAxisLabelFontFace: "+mn-lt", valAxisLabelFontSize: 14, valAxisLabelColor: "5E5E5E", valAxisLabelFormatCode: "# ##0", valAxisLineShow: false,
+  valAxisLabelFontFace: "+mn-lt", valAxisLabelFontSize: 16, valAxisLabelColor: "5E5E5E", valAxisLabelFormatCode: "# ##0", valAxisLineShow: false,
   valGridLine: { color: "E4E4E0", size: 0.75 }, catGridLine: { style: "none" },
   showTitle: false, showValue: false,
 });
-note(s, fr(`févr. ${pct(V.evol_fevrier_2026)}`), 1.45, 3.05, 1.5, { taille: 17, gras: true, couleur: K.petrole });
-note(s, fr(`mars ${pct(V.evol_mars_2026)}`), 2.55, 1.85, 1.6, { taille: 17, gras: true });
+note(s, fr(`févr. ${pct(V.evol_fevrier_2026)}`), 1.45, 3.05, 1.5, { taille: 18, gras: true, couleur: K.petrole });
+note(s, fr(`mars ${pct(V.evol_mars_2026)}`), 2.55, 1.85, 1.6, { taille: 18, gras: true });
 code(s, ["CA N-1 =", "CALCULATE(", "  [CA],", "  SAMEPERIODLASTYEAR(", "    Calendrier[Date]))", "", "Évolution vs N-1 =", "DIVIDE(", "  [CA] - [CA N-1],", "  [CA N-1])"], 8.4, 1.85, 4.28, 4.85, 18);
 notes(s, `
 6 minutes. Le moment fort du module, parce que le chiffre raconte une histoire que tout le monde dans la salle connaît.
@@ -1220,13 +1220,13 @@ cadre(s, G.L + 0.2, 4.25, 7.75, 1.15);
 etape(s, 1, 9.05, 2.3); texte(s, "Les chiffres que votre lecteur cherche en premier : CA, tickets, panier, évolution.", 9.65, 2.27, 3.05, { taille: 18 });
 etape(s, 2, 9.05, 3.35); texte(s, "L'évolution dans le temps, avec l'année précédente.", 9.65, 3.32, 3.05, { taille: 18 });
 etape(s, 3, 9.05, 4.6); texte(s, "Le détail, pour ceux qui veulent creuser : villes, catégories.", 9.65, 4.57, 3.05, { taille: 18 });
-texte(s, "Un clic sur une barre filtre toute la page. Format > Modifier les interactions pour choisir qui filtre qui.", 9.05, 5.75, 3.65, { taille: 16, couleur: K.gris });
+texte(s, "Un clic sur une barre filtre la page. Format > Modifier les interactions.", 9.05, 5.75, 3.65, { taille: 18, couleur: K.gris });
 notes(s, `
 6 minutes. Je ne fais pas un cours de design de tableau de bord, je donne une règle de lecture simple : en haut ce qu'on regarde en trois secondes, au milieu l'évolution, en bas le détail.
 
 Les numéros sur la slide sont l'ordre de lecture, pas un ordre de construction.
 
-Trois conseils que je donne à l'oral :
+Ce que je dis à l'oral :
 - une page répond à une question. Celle-ci répond à « comment vont les ventes ? ». Si vous avez une autre question (les stocks, les marges), faites une autre page ;
 - pas plus de cinq ou six visuels par page. Au-delà, personne ne lit ;
 - les segments en haut ou sur le côté, toujours au même endroit d'une page à l'autre.
@@ -1256,7 +1256,7 @@ notes(s, `
 
 Ce qui bloque d'habitude :
 - La carte affiche « Nombre de Date » ou une somme bizarre : ils ont glissé une colonne au lieu de la mesure. Les mesures sont celles avec l'icône de calculatrice.
-- Le graphique mensuel mélange 2025 et 2026 : c'est normal sans segment, le segment Année règle ça. Je les laisse le découvrir.
+- Le graphique mensuel mélange 2025 et 2026 : c'est normal sans segment, le segment Année règle ça. Je les laisse trouver.
 - La matrice affiche les mois en vrac : ils ont mis Mois au lieu de Année, ou le tri par colonne n'est pas fait.
 
 Pour finir, je demande à deux volontaires de projeter leur page. On commente ce qui marche, avec bienveillance. C'est souvent le moment où la salle réalise qu'elle a fait en une journée ce qui lui prend une matinée chaque semaine.

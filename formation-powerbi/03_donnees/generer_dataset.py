@@ -377,38 +377,38 @@ def ecrire_corrige(wb, v, premiere_dup, derniere_donnee, ligne_total, nb_dup):
          "20, 21"),
         ("Export_Ventes", "Magasin MAG-13 (Kénitra, ouvert le 16/03/2026) absent du référentiel",
          "Colonne C, toutes les lignes « MAG-13 » à partir du 16/03/2026.",
-         f"Une barre « (Vide) » dans tout visuel par ville ou par magasin : {v['ca_mag13_vide']:,.2f} MAD.".replace(",", " "),
+         f"Une ligne « (Vide) » dans tout visuel par ville ou par magasin : {v['ca_mag13_vide']:,.2f} MAD.".replace(",", " "),
          "Ne pas corriger dans Power BI : demander l'ajout de MAG-13 au propriétaire du référentiel. "
          "En salle, on le laisse pour montrer l'effet.",
-         "28, 30"),
+         "27, 29"),
         ("Magasins", "Ville et région fusionnées dans une colonne « Ville - Région »",
          "Colonne C, lignes 2 à 14.",
          "Impossible de filtrer par ville ou par région.",
          "Fractionner la colonne > Par délimiteur, délimiteur personnalisé « espace-tiret-espace » ( - ). "
          "Un simple tiret couperait aussi « Casablanca-Settat ».",
-         "19"),
+         "18"),
         ("Magasins", "Casse incohérente : « Casablanca », « casa », « CASABLANCA »",
          "C2 (Casablanca), C3 (casa), C4 (CASABLANCA suivi de deux espaces).",
          "Power Query voit trois villes. Une fois chargé, le modèle fusionne « CASABLANCA » et « Casablanca » "
          "(il ignore la casse) mais « casa » reste une ville à part.",
          "Supprimer les espaces, Majuscule à chaque mot, puis Remplacer les valeurs « Casa » par « Casablanca » "
          "avec l'option « Mettre en correspondance tout le contenu de la cellule ». Sans cette case : « Casablancablanca ».",
-         "17, 18"),
+         "17, 19"),
         ("Magasins", "Espaces en fin de ville",
          "C4 (« CASABLANCA  »), C7 (« Salé  » sur la ligne en double).",
          "Deux « Salé » distincts dans les listes de filtre de Power Query.",
          "Transformer > Format > Supprimer les espaces, après le fractionnement.",
-         "18"),
+         "19"),
         ("Magasins", "MAG-05 saisi deux fois",
          "Lignes 6 et 7 : même code, la seconde avec « Salé » suivi d'espaces.",
          "La relation Magasins - Ventes ne peut pas être un-à-plusieurs : Power BI propose plusieurs-à-plusieurs.",
          "Supprimer les espaces sur la ville, puis Supprimer les doublons. Vérifier : 12 lignes.",
-         "27"),
+         "26"),
         ("Calendrier", "Mois en toutes lettres (aucun défaut de saisie)",
          "Colonne D.",
          "Axe des mois trié par ordre alphabétique : août, avril, décembre, février…",
          "Pas dans Power Query : vue Table, colonne Mois > Outils de colonne > Trier par colonne > N° mois.",
-         "38"),
+         "37"),
     ]
     for c, h in enumerate(entetes, 1):
         cell = ws.cell(row=4, column=c, value=h)
@@ -446,7 +446,7 @@ def ecrire_corrige(wb, v, premiere_dup, derniere_donnee, ligne_total, nb_dup):
         ("CA N-1 de mars 2026 : formule 6", v["ca_mars_2025"], "Ramadan 2025 : 02/03 au 30/03 (estimation).", "#,##0.00"),
         ("Évolution vs N-1, mars 2026 : formule 7", v["evol_mars_2026"], "Baisse due au décalage du Ramadan.", "0.0%"),
         ("Évolution vs N-1, février 2026", v["evol_fevrier_2026"], "Hausse due au même décalage.", "0.0%"),
-        ("CA de la barre « (Vide) » (MAG-13)", v["ca_mag13_vide"], "Ventes de MAG-13 depuis le 16/03/2026.", "#,##0.00"),
+        ("CA de la ligne « (Vide) » (MAG-13)", v["ca_mag13_vide"], "Ventes de MAG-13 depuis le 16/03/2026.", "#,##0.00"),
     ]
     for lib, val, comment, fmt in controles:
         ws.cell(row=r, column=1, value=lib).font = police

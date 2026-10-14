@@ -92,7 +92,9 @@ Chaque capture à faire est un rectangle gris clair à bord pointillé, avec en 
 
 ## Graphiques
 
-Le seul graphique de données (slide N-1 et Ramadan) est un graphique PowerPoint natif, calculé sur le dataset : CA en pétrole, N-1 en gris, février et mars 2026 signalés en rouge. Pas de légende séparée : les séries sont nommées au bout des courbes.
+Le seul graphique de données (slide N-1 et Ramadan) est un graphique PowerPoint natif, calculé sur le dataset : CA 2026 en pétrole, année précédente en gris. Une légende sous le graphique (deux séries), et les écarts de février et mars écrits directement au-dessus des barres.
+
+Contrôle de la palette du graphique (validateur du skill dataviz, octobre 2026) : séparation daltonisme ΔE 22,9 et vision normale ΔE 25,9, contraste des barres grises 3,4:1 sur blanc. Le validateur signale le gris comme « trop neutre » et le pétrole comme « trop foncé » pour une palette catégorielle : c'est voulu ici, l'année de référence doit s'effacer derrière l'année en cours. Le gris retenu est `#8C8C87` (le premier choix `#A3A39E` n'atteignait que 2,5:1).
 
 ## Documents Word
 
