@@ -1,6 +1,6 @@
 // Échantillon des gabarits, pour valider la direction visuelle avant la production.
 const path = require("path");
-const { applyTheme } = require("/root/.claude/skills/synced/813eabaf-c939-4e73-b1cb-56563348a11c_86566cfd-1f0a-4838-8f8e-00fc3c4cb503/pptx/scripts/apply_theme.js");
+const { applyTheme } = require("./apply_theme");
 const { fr, COULEURS: K, THEME, POLICES: P, G, creerPresentation, emplacementCapture, cadre, etape, fleche, note } = require("./gabarits");
 
 const pres = creerPresentation();

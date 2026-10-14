@@ -2,7 +2,7 @@
 // Usage : NODE_PATH=./node_modules node construire_presentation.js
 const fs = require("fs");
 const path = require("path");
-const { applyTheme } = require("/root/.claude/skills/synced/813eabaf-c939-4e73-b1cb-56563348a11c_86566cfd-1f0a-4838-8f8e-00fc3c4cb503/pptx/scripts/apply_theme.js");
+const { applyTheme } = require("./apply_theme");
 const { fr, COULEURS: K, THEME, POLICES: P, G, creerPresentation, emplacementCapture, cadre, etape, fleche, note } = require("./gabarits");
 
 const D = JSON.parse(fs.readFileSync(path.join(__dirname, "donnees_slides.json"), "utf8"));
@@ -80,7 +80,7 @@ function aVous(s, { duree, etapes, attendu, rattrapage, bonus }) {
     const fin = texte(s, t, G.L + 0.68, y, 7.35, { taille: pt, couleur: K.papier });
     y = Math.max(fin, y + 0.5) + 0.14;
   });
-  if (y > 6.85) console.warn(`Slide ${s._numero} : consignes trop longues (y=${y.toFixed(2)})`);
+  if (y > 7.25) console.warn(`Slide ${s._numero} : consignes trop longues (y=${y.toFixed(2)})`);
   let yd = 2.4;
   const bloc = (titre, corps) => {
     if (!corps) return;
@@ -89,7 +89,7 @@ function aVous(s, { duree, etapes, attendu, rattrapage, bonus }) {
   bloc("Résultat attendu", attendu);
   bloc("Vous avez décroché ?", rattrapage);
   bloc("Pour les profils techniques", bonus);
-  if (yd > 6.95) console.warn(`Slide ${s._numero} : colonne de droite trop longue (y=${yd.toFixed(2)})`);
+  if (yd > 7.25) console.warn(`Slide ${s._numero} : colonne de droite trop longue (y=${yd.toFixed(2)})`);
 }
 
 function avantApres(s, { gauche, droite, bas, y0 = 2.15, h = 3.35 }) {
