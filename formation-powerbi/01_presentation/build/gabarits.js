@@ -140,7 +140,7 @@ function note(slide, texte, x, y, w, opts = {}) {
 
 // Typographie française : insécable après « et avant », : ; ? !
 function fr(t) {
-  return t.replace(/« /g, "«\u00A0").replace(/ »/g, "\u00A0»").replace(/ :/g, "\u00A0:")
+  return t.replace(/'/g, "\u2019").replace(/« /g, "«\u00A0").replace(/ »/g, "\u00A0»").replace(/ :/g, "\u00A0:")
     .replace(/ ([;?!])/g, "\u202F$1").replace(/(\d) (\d{3})\b/g, "$1\u00A0$2").replace(/(\d) (MAD|min|%|lignes)/g, "$1\u00A0$2");
 }
 

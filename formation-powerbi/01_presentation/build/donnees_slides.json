@@ -1,0 +1,93 @@
+{
+ "lignes_brutes": 5189,
+ "lignes_propres": 5159,
+ "maj_lignes_brutes": 5269,
+ "maj_lignes_propres": 5239,
+ "maj_derniere_date": "11/10/2026",
+ "derniere_date": "30/09/2026",
+ "exemples": [
+  {
+   "Date": "01/10/2024",
+   "Code magasin": "MAG-02",
+   "Réf produit": "EPI-001",
+   "Quantité": 1.0,
+   "Prix unitaire": 67.5,
+   "Montant": 67.5
+  },
+  {
+   "Date": "01/10/2024",
+   "Code magasin": "MAG-03",
+   "Réf produit": "BOI-004",
+   "Quantité": 5.0,
+   "Prix unitaire": 7.5,
+   "Montant": 37.5
+  },
+  {
+   "Date": "01/10/2024",
+   "Code magasin": "MAG-03",
+   "Réf produit": "BOI-001",
+   "Quantité": 10.0,
+   "Prix unitaire": 6.0,
+   "Montant": 60.0
+  },
+  {
+   "Date": "01/10/2024",
+   "Code magasin": "MAG-03",
+   "Réf produit": "EPI-003",
+   "Quantité": 1.0,
+   "Prix unitaire": 90.0,
+   "Montant": 90.0
+  },
+  {
+   "Date": "01/10/2024",
+   "Code magasin": "MAG-07",
+   "Réf produit": "EPI-009",
+   "Quantité": 1.0,
+   "Prix unitaire": 9.0,
+   "Montant": 9.0
+  },
+  {
+   "Date": "01/10/2024",
+   "Code magasin": "MAG-07",
+   "Réf produit": "TEX-008",
+   "Quantité": 3.0,
+   "Prix unitaire": 30.0,
+   "Montant": 90.0
+  }
+ ],
+ "mensuel_2025": [
+  14916.45,
+  12714.6,
+  28101.05,
+  18228.1,
+  16438.0,
+  13511.7,
+  15973.1,
+  18722.6,
+  18454.0
+ ],
+ "mensuel_2026": [
+  14892.7,
+  16714.1,
+  20832.55,
+  13509.35,
+  16493.8,
+  14285.2,
+  17295.2,
+  19551.9,
+  17426.6
+ ],
+ "ca_par_ville": {
+  "Agadir": 29048.0,
+  "Casablanca": 119542.65,
+  "Fès": 32099.2,
+  "Marrakech": 35707.7,
+  "Meknès": 21122.65,
+  "Oujda": 19259.7,
+  "Rabat": 41835.35,
+  "Salé": 31709.75,
+  "Tanger": 34179.7,
+  "Tétouan": 23083.8
+ },
+ "qte_brute_avec_doublons": 11031
+}
